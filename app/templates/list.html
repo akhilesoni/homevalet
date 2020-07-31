@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="head">
+    <img id="logo" src="{% static 'logo1.png' %}">
+ </div>   
+ <div id="description"><h4>Electricians | Plumbers | Mechanics | Carpenters | Painters | Home sanitization</h4></div>
+ <div id="content">
+    
+
+    <div class="content_box2">
+      
+        <form action="{% url 'list' %}" id="input1" method="POST">{% csrf_token %}
+            <select class="input_feild" name="servise_type">
+                {% for servise_type in all_servises %}
+                <option value="{{servise_type}}">{{servise_type}}</option>
+                {%endfor%}
+            </select>
+            <select class="input_feild" name="city">
+                {% for city in all_city %}
+                <option value="{{city}}">{{city}}</option>
+                {%endfor%}     
+            </select>
+            <select class="input_feild" name="state">
+                {% for state in all_state %}
+                <option value="{{state}}">{{state}}</option>
+                {%endfor%}
+            </select>
+            <button class="input_button">search</button>
+        </form>
+
+
+    </div>
+   
+</div>
+<div class="recom_title"><h3>Search Results!</h3></div>
+ 
+ <div class="containers">
+    {% for servise in servises %}
+    <a href="{% url 'profile' servise.id %}">
+    <div class="container_servise">
+        <div class="container_image">
+            {% if servise.servise_type == 'plumber' %}
+            <img src="{% static 'plumber.jpg' %}" height="200px" >
+            {% elif servise.servise_type == 'electriacian' %}
+            <img src="{% static 'electrician,jpg' %}" height="200px" >
+            {% elif servise.servise_type == 'painter' %}
+            <img src="{% static 'painter.jpg' %}"  height="200px">
+            {% elif servise.servise_type == 'carpenter' %}
+            <img src="{% static 'carpenter.jpg' %}"  height="200px">
+            {% elif servise.servise_type == 'sanitization' %}
+            <img src="{% static 'sanitization.jpg' %}"  height="200px">
+            {% elif servise.servise_type == 'mechanic' %}
+            <img src="{% static 'mechanic.jpg' %}"  height="200px">
+            {%endif%}
+        </div>
+        <div class="container_detail">
+            <div class="price">
+                <h4> &#x20b9;  {{servise.price}}</h4> 
+             </div>
+             <div class="servise_description">
+                 {{servise.name}} <br> {{servise.servise_type}} <br>  {{servise.city}} , {{servise.state}}
+ 
+             </div>
+        </div>
+    </div>
+    </a>
+    {%endfor%}
+</div>
+
+<div id="footer">
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>Top visited cities</p>
+        </div>
+        <div id="cities">
+                <div class="city"><p>Cities</p></div>
+                {% for city in all_city %}
+                <div class="city">{{city}}</div>
+                {%endfor%}     
+        </div>
+
+    </div>
+   
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>About Us</p>
+        </div>
+        <div id="cities">
+               <div class="city">
+                    About Us
+                </div> 
+                <div class="city">
+                    Contact Us
+                </div> 
+                <div class="city">
+                    HomeValetPeople
+                </div>   
+        </div> 
+
+    </div>
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>Home Valet</p>
+        </div>
+        <div id="cities">
+            <div class="city">
+                    Help
+            </div> 
+            <div class="city">
+                copyright
+            </div> 
+            <div class="city">
+                legal & privacy information
+            </div> 
+        </div>
+
+    </div>
+    <div class='foot_container'>
+        <div class="title_footer">
+            Follow Us
+        </div>
+        <div id="social_links">
+            <div class="social_icon">
+                <img class="icon" src="{%static 'instagram.png' %}" height="40px" width="40px">
+            </div>
+       
+            <div class="social_icon">
+                <img class="icon" src="{%static 'gmail.jpg' %}" height="40px" width="40px">
+            </div>
+
+            <div class="social_icon" class="social_icon">
+                <img class="icon" src="{%static 'facebook.png' %}" height="40px" width="40px">
+            </div>
+        </div>
+    </div>  
+</div>
+<div id="copyright">
+    <h4>copyright-Home-Valet-Group</h4>
+</div>
+
+
+{% endblock %}

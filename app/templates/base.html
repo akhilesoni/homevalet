@@ -1,0 +1,317 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif  ;
+            margin: 0px;
+            text-decoration: none;
+            
+            }
+            #head{
+                text-align: center;
+                padding: 10px;
+                position: -webkit-sticky; 
+                position: sticky;
+                top: 0;
+                background-color: #ffffff;
+                box-shadow: 0px;
+                
+                
+
+            }
+           
+            .content_box2{
+                box-shadow: 3px 7px 15px #8f8f8f;
+                margin-bottom: 1px;
+                margin-left: auto;
+                margin-right: auto;
+             
+                text-align: center;
+                color: rgb(75, 73, 73);
+                border-radius: 5px;
+                background-color: rgb(255, 255, 255);
+                
+
+            }
+            
+            #content{
+                
+                display: flex;
+                flex-wrap: wrap;
+               padding: 20px;
+               background-image: linear-gradient(to right, rgb(187, 187, 187) ,rgb(116, 182, 202));
+              
+            }
+            .title_box{
+                font-size: larger;
+                margin: 10px;
+                border-bottom: 1px solid rgb(143, 143, 143);
+            }
+
+            
+            
+           
+            #input1{
+                padding: 15px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .input_feild{
+                padding: 10px;
+                margin: 5px;
+                border: 0px;
+                background-color: rgb(221, 221, 221);
+                border-radius: 3px;
+                min-width: 230px;
+            }
+            .input_button{
+                padding: 10px;
+                margin: 7px;
+                border: 0px;
+                background-color: rgb(145, 238, 145);
+                border-radius: 3px;
+                min-width:230px;
+
+            }
+
+            #description{
+                color: rgb(124, 124, 124);
+                font-size: medium;
+                text-align: center; 
+                background-color: #ffffff;
+                padding: 15px;
+
+            }
+            
+            #title_search{
+                font-size: larger;
+                margin: 10px;
+            }
+
+            #footer{
+                background-color: rgb(202, 228, 219);
+                min-height: 200px;
+                color: #5e5e5e;
+                padding: 20px   ;
+                display: flex;
+                flex-wrap: wrap;
+                border-top: 1px solid rgb(190, 190, 190);
+            }
+            .foot_container{
+                margin: auto;
+            }
+            #cities{
+                margin: auto;
+                max-width: 600px;
+                font-size: small;
+            }
+            .city{
+                
+                margin: 7px;
+            }
+            #social_links{
+                margin: auto;
+                max-width: 600px;
+               
+                display: flex;
+                flex-wrap: wrap;
+
+            }
+            .icon{
+                padding: 5px;
+                margin:5px;
+                border-radius: 10px;
+            }
+            .title_footer{
+                margin: auto;
+                max-width: 600px;
+                padding: 5px;
+                font-size: larger;
+                color: black;
+
+
+            }
+            .social_icon{
+                border-radius: 10px;
+            }
+            #logo{
+                height: 100px;
+                transition: 0.4s;
+            }
+           
+            .containers{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 30px;
+               
+            }
+            .container_servise{
+                border: 1px solid rgb(108, 218, 136);
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+                box-shadow: 3px 5px 10px #e9e9e9;
+                border-radius: 5px;
+                text-decoration: none;
+
+            }
+            .container_image{
+                margin: 10px;
+                border: 1px  solid #bebebe;
+            }
+            .container_detail{
+                padding: 10px;
+                border-left: 6px solid rgb(230, 230, 1);
+            }
+            .servise_description{
+                font-size: small;
+            }
+            .recom_title{
+                margin:30px;
+                margin-left: 40px;
+                padding: 8px;
+                margin-bottom: 0;
+                text-align: center;
+                border-left: 10px solid rgb(226, 226, 31);
+                background-color: #eeeeee;
+            
+            }
+
+
+            #copyright{
+                background-color: rgb(20, 85, 53);
+                padding: 10px;
+               font-size: small;
+               color: #ffffff;
+               padding-left: 20px;
+            }
+
+            .profile_content{
+                display: flex;
+                flex-wrap: wrap;
+                
+                max-width: 950px;
+                margin: auto;
+                padding:20px;
+            }
+            .profile_content_img{
+                
+                border: 1px solid rgb(151, 151, 151);
+            }
+            
+            
+            .profile_img{
+                width: 100%;
+                height: auto;
+            }
+            
+            .profile_content_description{
+                margin: auto;
+                min-width: 290px;
+                color: rgb(71, 71, 71);
+                
+                
+            }
+            .pcd_price{
+                border: 1px solid rgb(167, 167, 167);;
+                margin: 10px;
+                padding: 20px;
+                min-height: 160px;
+                box-shadow: 3px 5px 10px #e9e9e9;
+                transition: 0.2s;
+
+
+
+            }
+            .pcd_detail{
+                border: 1px solid rgb(167, 167, 167);;
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 3px 5px 10px #e9e9e9;
+                transition: 0.2s;
+
+
+
+
+            }
+            .pcd_price:hover{
+                box-shadow: 3px 5px 10px #5a5a5a;
+
+            }
+            .pcd_detail:hover{
+                box-shadow: 3px 5px 10px #5a5a5a;
+
+            }
+            .pcd_description:hover{
+                box-shadow: 3px 5px 10px #5a5a5a;
+
+            }
+            .pcd_description{
+                border: 1px solid rgb(167, 167, 167);
+                margin: 10px;
+                padding: 20px;
+                transition: 0.2s;
+                min-height: 160px;
+                box-shadow: 3px 5px 10px #e9e9e9;
+            }
+            .pcd_description p,.pcd_price p,.pcd_detail p{
+                margin-top: 30px;
+                font-size: smaller;
+            }
+            .pcd_book{
+                border: 1px solid rgb(167, 167, 167);;
+                margin: 10px;
+                
+                min-height: 160px;
+                box-shadow: 3px 5px 10px #e9e9e9;
+                border-radius: 20px;
+
+                
+
+
+            }
+            .pcd_book button{
+                color: #ffffff;
+                border: 0px;
+                height: 160px;
+                min-width:270px ;
+                background-color: rgb(79, 133, 212);
+                border-radius: 18px;
+                transition: 0.1s;
+                
+            }
+            .pcd_book button:hover{
+                background-color:rgb(68, 115, 184) ;
+            }
+            .pcd_book button:focus{
+                box-shadow: 3px 5px 10px #535353;
+
+            }
+
+            
+        </style>
+        
+
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+        <script>
+            window.onscroll = function() {scrollFunction()};
+    
+            function scrollFunction() {
+                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+               
+                document.getElementById("logo").style.height = "55px";
+              } else {
+                
+              document.getElementById("logo").style.height = "100px";
+
+              }
+               }
+    
+            </script>
+    </body>
+</html>
