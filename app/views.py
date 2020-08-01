@@ -40,7 +40,7 @@ def added(request):
         name = request.POST.get('name')
         city = request.POST.get('city')
         state = request.POST.get('state')
-        srvise_type = request.POST.get('servise_type')
+        servise_type = request.POST.get('servise_type')
         price = request.POST.get('price')
         servise(name=name, city=city, state=state, servise_type=servise_type, price=price)
         return redirect('index')
