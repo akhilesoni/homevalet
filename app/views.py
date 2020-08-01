@@ -32,4 +32,5 @@ def profile(request,id):
 
 
 def add_service(request):
-    return render(request, 'add_service.html')    
+
+    return render(request, 'add_service.html',{'all_city':all_city, 'all_servises':all_servises, 'all_state':all_state,'profile':servise_profile})    
