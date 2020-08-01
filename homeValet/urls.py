@@ -22,4 +22,6 @@ urlpatterns = [
     path("", app.views.index, name="index"),
     path('list/', app.views.list, name="list"),
     path('profile/?p<id>$#', app.views.profile, name='profile'),
+    path('add_service/', app.views.add_service, name="add_service"),
+
 ]

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="head">
+    <img id="logo" src="{% static 'logo1.png' %}">
+ </div>   
+ <div id="description"><h4>Electricians | Plumbers | Mechanics | Carpenters | Painters | Home sanitization</h4></div>
+ <div id="content">
+    
+
+ 
+
+<div id="footer">
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>Top visited cities</p>
+        </div>
+        <div id="cities">
+                <div class="city"><p>Cities</p></div>
+                {% for city in all_city %}
+                <div class="city">{{city}}</div>
+                {%endfor%}     
+        </div>
+
+    </div>
+   
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>About Us</p>
+        </div>
+        <div id="cities">
+               <div class="city">
+                    About Us
+                </div> 
+                <div class="city">
+                    Contact Us
+                </div> 
+                <div class="city">
+                    HomeValetPeople
+                </div>   
+        </div> 
+
+    </div>
+    <div class="foot_container">
+        <div class="title_footer">
+            <p>Home Valet</p>
+        </div>
+        <div id="cities">
+            <div class="city">
+                    Help
+            </div> 
+            <div class="city">
+                copyright
+            </div> 
+            <div class="city">
+                legal & privacy information
+            </div> 
+        </div>
+
+    </div>
+    <div class='foot_container'>
+        <div class="title_footer">
+            Follow Us
+        </div>
+        <div id="social_links">
+            <div class="social_icon">
+                <img class="icon" src="{%static 'instagram.png' %}" height="40px" width="40px">
+            </div>
+       
+            <div class="social_icon">
+                <img class="icon" src="{%static 'gmail.jpg' %}" height="40px" width="40px">
+            </div>
+
+            <div class="social_icon" class="social_icon">
+                <img class="icon" src="{%static 'facebook.png' %}" height="40px" width="40px">
+            </div>
+        </div>
+    </div>  
+</div>
+<div id="copyright">
+    <h4>copyright-Home-Valet-Group</h4>
+</div>
+
+
+{% endblock %}
