@@ -36,6 +36,13 @@ def add_service(request):
     return render(request, 'add_service.html',{'all_city':all_city, 'all_servises':all_servises, 'all_state':all_state})    
 
 def added(request):
+    form = add_service(request.POST)
+    name = form.cleaned_data['name']
+    servise_type = form.cleaned_data['servise_type']
+    state = form.cleaned_data['state']
+    city = form.cleaned_data['city']
+    price = form.cleaned_data['price']
+    servise(name=name, city=city, state=state, servise_type=servise_type, price=price).save()
     return redirect('index') 
 
        
