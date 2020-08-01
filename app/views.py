@@ -44,7 +44,8 @@ def added(request):
             city = adding_service_form.cleaned_data['city']
             state = adding_service_form.cleaned_data['state']
             price = adding_service_form.cleaned_data['price']
-            
+            servise(name=name, city=city, state=state, price=price, servise_type=servise_type).save()
+
             return render(request, 'added.html', {'all_city':all_city, 'all_servises':all_servises, 'all_state':all_state})    
     return redirect('index') 
 
