@@ -19,7 +19,7 @@ import app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', app.views.index, name="index"),
+    path("", app.views.index, name="index"),
     path('list/', app.views.list, name="list"),
     path('profile/?p<id>$#', app.views.profile, name='profile'),
 ]
