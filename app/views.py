@@ -37,7 +37,7 @@ def add_service(request):
 
 def added(request):
     if request.method == "POST":
-        adding_service_form = add_service(request.POST)
+        adding_service_form = add_service(request.POST['META'])
         if adding_service_form.is_valid():
             name = adding_service_form.cleaned_data['name']
             servise_type = adding_service_form.cleaned_data['servise_type']
