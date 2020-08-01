@@ -36,7 +36,7 @@ def add_service(request):
     return render(request, 'add_service.html',{'all_city':all_city, 'all_servises':all_servises, 'all_state':all_state})    
 
 def added(request):
-    if method == "POST":
+    if request.method == "POST":
         name = request.POST.get('name')
         city = request.POST.get('city')
         state = request.POST.get('state')
