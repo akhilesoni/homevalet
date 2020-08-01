@@ -8,28 +8,9 @@
  <div id="description"><h4>Electricians | Plumbers | Mechanics | Carpenters | Painters | Home sanitization</h4></div>
 <div id="content">
     <div class="content_box2">
-      
-        <form action="{% url 'added' %}" id="input1" method="POST">{% csrf_token %}
-            <input class="input_feild" type="text" name="name" placeholder="name for ad" required>
-            <select class="input_feild" name="servise_type">
-                {% for servise_type in all_servises %}
-                <option value="{{servise_type}}">{{servise_type}}</option>
-                {%endfor%}
-            </select>
-            <select class="input_feild" name="city">
-                {% for city in all_city %}
-                <option value="{{city}}">{{city}}</option>
-                {%endfor%}     
-            </select>
-            <select class="input_feild" name="state">
-                {% for state in all_state %}
-                <option value="{{state}}">{{state}}</option>
-                {%endfor%}
-            </select>
-            <button class="input_button">search</button>
-        </form>
-    </div>
-
+      thanks
+        </div>
+       
 </div>
 
  
