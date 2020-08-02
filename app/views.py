@@ -38,11 +38,11 @@ def add_service(request):
 def added(request):
     if request.method == "POST":
         name = request.POST.get('name')
+        servise_type = request.POST.get('servise_type')
         city = request.POST.get('city')
         state = request.POST.get('state')
-        servise_type = request.POST.get('servise_type')
         price = request.POST.get('price')
-        servise(name=name, city=city, state=state, servise_type=servise_type, price=price)
+        servise(name=name, city=city, state=state, servise_type=servise_type, price=price).save()
         return redirect('index')
     return redirect('index')    
   
