@@ -6,5 +6,7 @@ class servise(models.Model):
     city = models.CharField(max_length=30)
     state =models.CharField(max_length=30)
     servise_type = models.CharField(max_length=64)
-    price = models.IntegerField()       
+    price = models.IntegerField() 
+    
+          
 
